@@ -13,7 +13,7 @@ https://github.com/Antonio447-cloud/MEAN-stack-angular
 
     Happy Learning!
 
-## Task
+## Outline
 
 - Deploy and configure an Apache load balancer solution on Ubuntu 20.04 and make sure that our users can be served by web servers through the load balancer.
 
