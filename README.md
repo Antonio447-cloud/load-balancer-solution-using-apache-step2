@@ -13,11 +13,11 @@ https://github.com/Antonio447-cloud/MEAN-stack-angular
 
     Happy Learning!
 
-## Outline
+## Task
 
-- We will deploy and configure an Apache load balancer solution on Ubuntu 20.04 LTS (HVM) and make sure that our users can be served by web servers through the load balancer.
+- Deploy and configure an Apache load balancer solution on Ubuntu 20.04 and make sure that our users can be served by web servers through the load balancer.
 
-- We will implement this solution with 2 web servers, however this approach will be the same for 2 or more web servers.
+- Implement this solution with 2 web servers. This approach will be the same for 2 or more web servers.
 
 ## Uniform Resource Locators, IP Addresses and Domain Name System 
 
