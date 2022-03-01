@@ -63,7 +63,7 @@ In our set up for project "devops-website-solution-with-nfs-lvm-step1" we had 3 
 
 Before starting, we need to make sure that we have the following servers installed and configured based on the instruction of the following  GitHub repository: 
 
-https://github.com/Antonio447-cloud/devops-website-solution-with-nfs-lvm
+https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1
 
     2 RHEL8 Web Servers
     1 MySQL DB Server (based on Ubuntu 20.04)
@@ -129,8 +129,7 @@ We restart the Apache web server:
 
 `sudo systemctl restart apache2`
 
-**NOTE**: *The "bytraffic balancing" method will distribute incoming load between our web servers according to the current traffic load. Other methods include bybusyness, byrequests, and heartbeat.*
-
+- **NOTE**: *The "bytraffic balancing" method will distribute incoming load between our web servers according to the current traffic load. Other methods include bybusyness, byrequests, and heartbeat.*
 
 We need to verify that our configuration works. So, we need to try to access our LB’s public IP address or Public DNS from our web client (web browser).
 
@@ -196,7 +195,7 @@ Now, we curl our web servers from our LB locally. We can see our website represe
 ![curl3-web1](./images/curl3-web1.png)
 
 
-**NOTE**: *this is only internal configuration so it is local to our LB server. These DNS names will neither be resolvable from other servers internally nor from the internet.*
+- **NOTE**: *This is internal configuration only, so it is local to our LB server. The DNS names that we have just configured will neither be resolvable from other servers internally nor from the internet.*
 
 ![success.png](./images/success.png)
 
