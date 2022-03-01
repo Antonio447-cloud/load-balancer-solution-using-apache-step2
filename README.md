@@ -151,7 +151,7 @@ We refresh it 2 or 3 times and make sure that both servers receive "HTTP GET" re
 
 Now that everything is configured correctly, our users will not even notice that their requests are served by more than one server.
 
-**NOTE**: *Read about different configuration aspects of Apache "mod_proxy_balancer". Also, understand what "sticky session" means and when it is used.*
+- **NOTE**: *Read about different configuration aspects of Apache "mod_proxy_balancer". Also, understand what "sticky session" means and when it is used.*
 
 ## Configuring Local DNS Names Resolution
 
