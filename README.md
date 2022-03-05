@@ -2,15 +2,13 @@
 
 *Demonstration of how to enhance the website solution that we implemented on project: "devops-website-solution-with-nfs-lvm-step1" by adding a load balancer to distribute traffic between 2 web servers. We will also use a load balancer so that users can access our website by using a single URL. The source code used on this project was retrieved from darey.io.*
 
-- *This project is a continuation of project: "devops-website-solution-using-nfs-and-lvm-step1".*
+- This project is a continuation of project: 
+
+https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1
 
 - *We will continue using
  "devops-website-solution-with-nfs-lvm-step1" EC2 instances to complete this project.*
-
-*Instructions on how to launch and connect to your EC2 instance using an SSH client:*
-
-https://github.com/Antonio447-cloud/MEAN-stack-angular
-
+--------------
     Happy Learning!
 
 ## Outline
