@@ -65,9 +65,9 @@ Before starting, we need to make sure that we have the following servers install
 
 https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-project1
 
-- 2 RHEL8 Web Servers
-- 1 MySQL DB Server (based on Ubuntu 20.04)
-- 1 RHEL8 NFS server
+    2 RHEL8 Web Servers
+    1 MySQL DB Server (based on Ubuntu 20.04)
+    1 RHEL8 NFS server
 
 **NOTE**: *We used 3 web servers on project: "devops-website-solution-with-nfs-lvm-project1". However, for simplicity we will use 2 web servers instead for this project.*
 
