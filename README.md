@@ -1,25 +1,27 @@
 # Load Balancer Solution Using Apache
 
-*Demonstration of how to enhance the website solution that we implemented on project: "devops-website-solution-with-nfs-lvm-step1" by adding a load balancer to distribute traffic between 2 web servers. We will also use a load balancer so that users can access our website by using a single URL. The source code used on this project was retrieved from darey.io.*
+*Demonstration of how to enhance the website solution that we implemented on project: "devops-website-solution-with-nfs-lvm-project1" by adding a load balancer to distribute traffic between 2 web servers. We will also use a load balancer so that users can access our website by using a single URL. The source code used on this project was retrieved from darey.io.*
 
 - This project is a continuation of project: 
 
-https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1
+https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-project1
 
 - *We will continue using
- "devops-website-solution-with-nfs-lvm-step1" EC2 instances to complete this project.*
+ "devops-website-solution-with-nfs-lvm-project1" EC2 instances to complete this project.*
 --------------
     Happy Learning!
 
 ## Outline
 
-- Deploy and configure an Apache load balancer solution on Ubuntu 20.04 and make sure that our users can be served by web servers through the load balancer.
+- Deploy and configure an Apache load balancer solution on Ubuntu 20.04 
 
-- Implement this solution with 2 web servers. This approach will be the same for 2 or more web servers.
+- Make sure that our users can be served by 2 web servers through the load balancer.
+
+**NOTE**: *The load balancer solution can be implemented with 2 or more web servers.*
 
 ## Uniform Resource Locators, IP Addresses and Domain Name System 
 
-- When we access a website on the Internet we use a URL (Uniform Resource Locator) and we do not really know how many servers are out there serving our requests, this complexity is hidden from a regular user, but in case of websites that are being visited by millions of users per day (like Google or Reddit) it is impossible to serve all the users from a single web server (it is also applicable to databases, but for now we will not focus on distributed DBs).
+- When we access a website on the Internet we use a URL (Uniform Resource Locator). We do not really know how many servers are out there serving our requests, this complexity is hidden from a regular user, but in case of websites that are being visited by millions of users per day (like Google or Reddit) it is impossible to serve all the users from a single web server (it is also applicable to databases, but for now we will not focus on distributed DBs).
 
 - Each URL contains a domain name part, which is translated (resolved) to the IP address of a target server that will serve requests when we open a website on the Internet.
 
@@ -49,7 +51,7 @@ We can also distribute increased traffic across multiple web servers:
 
 **NOTE**: *the property of a system (in our case it is web tier) that handles growing load by adding resources, is called "Scalability".*
 
-In our set up for project "devops-website-solution-with-nfs-lvm-step1" we had 3 web servers and each of them had its own public IP address and public DNS name. So, in order for web clients to access our web servers they would need to use 3 different URLs that would contain 3 different DNS names or 3 different IP addresses. Now, it would not be a nice user experience to remember 3 different IP addresses or 3 different DNS names to make requests to 3 different servers that serve the same website, let alone, imagine doing this with millions of Google servers:
+In our set up for project "devops-website-solution-with-nfs-lvm-project1" we had 3 web servers and each of them had its own public IP address and public DNS name. So, in order for web clients to access our web servers they would need to use 3 different URLs that would contain 3 different DNS names or 3 different IP addresses. Now, it would not be a nice user experience to remember 3 different IP addresses or 3 different DNS names to make requests to 3 different servers that serve the same website, let alone, imagine doing this with millions of Google servers:
 
 - So, in order to hide all of this complexity from the regular user we can use a Load Balancer (LB) to have a single point of access with a single public IP address or DNS name. 
 
@@ -59,15 +61,15 @@ In our set up for project "devops-website-solution-with-nfs-lvm-step1" we had 3 
 
 # Prerequisites
 
-Before starting, we need to make sure that we have the following servers installed and configured based on the instruction of the following  GitHub repository: 
+Before starting, we need to make sure that we have the following servers installed and configured based on the instruction of the following GitHub repository: 
 
-https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-step1
+https://github.com/Antonio447-cloud/devops-website-solution-using-nfs-and-lvm-project1
 
-    2 RHEL8 Web Servers
-    1 MySQL DB Server (based on Ubuntu 20.04)
-    1 RHEL8 NFS server
+- 2 RHEL8 Web Servers
+- 1 MySQL DB Server (based on Ubuntu 20.04)
+- 1 RHEL8 NFS server
 
-**NOTE**: *We used 3 web servers on our project: "devops-website-solution-with-nfs-lvm-step1". However, for simplicity we will use 2 web servers instead for this project.*
+**NOTE**: *We used 3 web servers on project: "devops-website-solution-with-nfs-lvm-project1". However, for simplicity we will use 2 web servers instead for this project.*
 
 ## Prerequesite Configuration
 
