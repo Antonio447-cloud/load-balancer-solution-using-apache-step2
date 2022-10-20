@@ -1,6 +1,6 @@
 # Load Balancer Solution Using Apache
 
-*Demonstration of how to enhance the website solution that we implemented on project: "devops-website-solution-with-nfs-lvm-project1" by adding a load balancer to distribute traffic between 2 web servers. We will also use a load balancer so that users can access our website by using a single URL. The source code used on this project was retrieved from darey.io.*
+*Demonstration of how to enhance the website solution that we implemented on project: "devops-website-solution-with-nfs-lvm-project1" by adding a load balancer to distribute traffic between 2 web servers. We will also use a load balancer so that users can access our website by using a single URL.*
 
 - This project is a continuation of project: 
 
